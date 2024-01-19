@@ -75,7 +75,7 @@ const Index = () => {
     formData.append("d5", d5);
     formData.append("d6", d6);
 
-    fetch("https://portfoliifybackend-tp8u.onrender.com", {
+    fetch("https://portfoliifybackend-tp8u.onrender.com/upload", {
       method: "POST",
       body: formData,
     })
