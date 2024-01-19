@@ -75,7 +75,7 @@ const Index = () => {
     formData.append("d5", d5);
     formData.append("d6", d6);
 
-    fetch("http://localhost:3001/upload", {
+    fetch("https://portfoliifybackend-tp8u.onrender.com", {
       method: "POST",
       body: formData,
     })
