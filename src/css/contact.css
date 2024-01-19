@@ -1,0 +1,114 @@
+.ContactHero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.titcont {
+  flex: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 70px;
+}
+.layerline {
+  flex: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.linebox1 {
+  height: 50%;
+  width: 50%;
+  position: relative;
+}
+
+.linebox2 {
+  position: relative;
+  height: 50%;
+  width: 50%;
+}
+.number {
+  opacity: 1;
+  font-size: 50px;
+  width: 40%;
+  height: 50px;
+background: transparent;
+color: white;
+overflow-y: hidden;
+border: none;
+}
+.email {
+  font-size: 50px;
+  width: 40%;
+  height: 50px;
+background: transparent;
+color: white;
+overflow-y: hidden;
+border: none;
+}
+
+.line1 {
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+  right: 0; 
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.line1::before {
+  content: "";
+  position: absolute;
+  top: 232px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.linemiddle {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  
+  width: 1px;
+  height: 232px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.line2 {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.line2::before {
+  content: "";
+  position: absolute;
+  top: 232px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.insidedivlb2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insidedivlb2 > div:nth-child(1) {
+  opacity: 0.5;
+}
+.insidedivlb1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insidedivlb1 > div:nth-child(1) {
+  opacity: 0.5;
+}

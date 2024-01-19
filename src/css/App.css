@@ -1,0 +1,772 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#circle {
+  position: fixed;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  background-color: blueviolet;
+  border-radius: 70%;
+  z-index: 100;
+
+  transition: width 1s, height 1s, border-radius 1s, transform 1s;
+  transform-origin: center center;
+  z-index: 100;
+}
+#title2:hover ~ #circle {
+  /*height: 250px;
+  width: 250px;
+  border-radius: 20%;
+  mix-blend-mode: color;
+*/
+  /* background-image: url('https://images.unsplash.com/photo-1505533321630-975218a5f66f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); ;
+  background-size: 340px;*/
+}
+.menu:hover {
+  background: RGB(38,38,42);
+  color: white;
+}
+.menu:hover ~ #circle {
+  opacity: 0;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjust the width as needed */
+  height: 100vh;
+}
+.banner h1 {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20vw;
+  text-align: center;
+  line-height: 90vh;
+  z-index: 8;
+  mix-blend-mode: screen; /* This blends the video with the text */
+}
+
+#title2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vw;
+  z-index: 100;
+  color: black;
+}
+.menu {
+  position: fixed;
+  top: 4.5%;
+  left: 90.5%;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border: grey 1px solid;
+  z-index: 1000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+.menu:hover {
+}
+#spart {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 50px;
+}
+#spart > div {
+  position: relative;
+  height: 158px;
+  width: 100%;
+  font-size: 100px;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+}
+#spart > div::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 85%;
+  margin-top: -18px;
+  background: black;
+}
+#spart > div:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  height: 1px;
+  width: 85%;
+  background-color: black;
+}
+.overlay {
+  position: fixed;
+
+  background-color: RGB(38,38,42);
+  height: 100%;
+  width: 100%;
+  z-index: 150;
+  animation: topdownOverlay 0.5s both;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  font-size: 50px;
+  color: white;
+}
+
+.menu1 {
+  position: fixed;
+  top: 4.5%;
+  left: 90.5%;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border: grey 1px solid;
+  z-index: 1000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  transition: all 0.5s;
+  border-color: white;
+  color: white;
+}
+.menu1:hover {
+  background-color: white;
+  color: RGB(38,38,42);
+}
+@keyframes topdownOverlay {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.closing-animation {
+  animation: closeOverlay 0.5s both;
+}
+@keyframes closeOverlay {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@keyframes Scale {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+#blk1 {
+  height: 400px;
+  width: 300px;
+  background: lightblue;
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  left: 50%;
+  animation: Scale 1s both;
+}
+#blk2 {
+  height: 400px;
+  width: 300px;
+  background: grey;
+  position: absolute;
+  z-index: 6;
+  top: 10%;
+  left: 30%;
+  animation: Scale 1s 0.1s both;
+}
+#blk3 {
+  height: 400px;
+  width: 300px;
+  background: beige;
+  position: absolute;
+  z-index: 6s;
+  top: 20%;
+  left: 40%;
+  animation: Scale 1s 0.5s both;
+}
+#blk4 {
+  height: 400px;
+  width: 300px;
+  background: grey;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  animation: Scale 1s 1s both;
+}
+#title2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vw;
+  z-index: 7;
+  color: RGB(169, 171, 181);
+  animation: height 1s 1S both;
+  background-color: transparent;
+  border: none;
+  font-size: 20vw;
+  text-align: center;
+  height: 400px;
+  font-family: sans-serif;
+  overflow-y: hidden;
+}
+.textTitle2{
+  background-color: transparent;
+  color: grey;
+  font-size: 10vw;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+
+  
+}
+.
+@keyframes height {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+.twoDesigns {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+}
+.twoDesigns :nth-child(1) {
+  width: 40vw;
+  margin-left: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+.twoDesigns :nth-child(2) {
+  width: 40vw;
+  margin-left: 10vh;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.x {
+  color: white;
+  z-index: 1000;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+.onepartabout {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20vh;
+}
+.refsabout {
+  font-size: 60px;
+  font-weight: bold;
+}
+.socialmedia {
+  font-size: 50px;
+  display: flex;
+  font-weight: bold;
+  margin-left: -65px;
+  transition: transform 0.3s;
+
+
+}
+.socialmedia:hover{
+  transform: translateX(20px);
+  color: yellow;
+  cursor: pointer;
+}
+.secondpartabout {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -20vh;
+  justify-content: center;
+  font-size: 30px;
+  color: yellow;
+  font-weight: bold;
+}
+.disappearabout.refs {
+  position: relative;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.disappearabout.refs:hover {
+  transform: translateX(20px);
+  color: yellow;
+}
+.disappearabout.sm {
+  position: relative;
+  transition: color 0.8s;
+}
+.disappearabout.sm:hover {
+  color: darkblue;
+}
+.twoDesigns:hover#circle {
+  transform: scale(10);
+}
+.middleimg {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middleimg > div {
+  height: 300px;
+  width: 300px;
+  background: grey;
+}
+.paraContainer {
+  max-height: 150vh; 
+  width: 100vw;
+  display: flex;
+
+  justify-content: center;
+  align-self: center;
+  overflow: hidden;
+}
+.paraContainer > div {
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  font-size: 120px;
+
+
+}
+.para{
+  background: transparent;
+  color: white;
+  overflow-y: hidden;
+  border: none;
+  font-family: sans-serif;
+}
+.twoside {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.twoside :nth-child(1) {
+  height: 100%;
+  width: 50%;
+}
+.twoside :nth-child(2) {
+  height: 20%;
+  width: 50%;
+}
+.exp {
+  display: flex;
+  justify-content: center;
+
+  font-weight: lighter;
+  color: white;
+  border: none;
+  font-family: sans-serif;
+  font-size: 100px;
+  max-height: 60%;
+  overflow: hidden;
+  
+}
+.rightsidexp {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  font-size: 50px;
+  left: -10%;
+height: 50px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+.thirdpage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.img1 {
+  height: 100%;
+  width: 50%;
+}
+/*.img1::after{
+  content: 'Full range of design services';
+  width: 200px;
+  height: 100px;
+  position: relative;
+  display: block;
+  left: 10%;
+  top: 3%;
+  font-size: 17px;
+  opacity: 0.6
+}*/
+.img2 {
+  height: 100%;
+  width: 50%;
+display: flex;
+flex-direction: column;
+
+
+}
+/*.img2::after{
+  content: 'Comprehensive construction services';
+  width: 300px;
+  height: 100px;
+  position: relative;
+  display: block;
+
+ 
+  top:15%;
+  font-size: 17px;
+  opacity: 0.6;
+  
+}*/
+.innerimg1 {
+  position: relative;
+  width: 50%;
+  background-color: transparent;
+
+  z-index: 6;
+}
+.txtimg{
+  opacity: 0.5;
+  background-color: transparent;
+  color: white;
+  border: none;
+  z-index: 100;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.innerimg1 > img {
+  width: 100%;
+  height: auto;
+}
+.innerimg2 {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.innerimg2 > img {
+  height: auto;
+  width: 110%;
+}
+.layer {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.layer0{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.layer0::after{
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: grey;
+}
+.layer0::before {
+  position: absolute;
+  content: "";
+  height: 50vh;
+  width: 1px;
+  background: grey;
+  top: -50%;
+}
+.layer::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: grey;
+}
+.layer::before {
+  position: absolute;
+  content: "";
+  height: 135vh;
+  width: 1px;
+  background: grey;
+  top: 50%;
+}
+.img3 {
+  height: 100vh;
+  width: 50%;
+  position: relative;
+
+
+}
+/*.img3::after{
+  content: 'We perform the functions of a general contract';
+  display: block;
+  width: 400px;
+  height: 100px;
+  position: relative;
+  top: 5%;
+  left: 27%;
+  font-size: 17px;
+  opacity: 0.6;
+  white-space: wrap;
+  
+}*/
+.innerimg3 {
+
+
+left: 30%;
+justify-content: center;
+  position: relative;
+  top: 30%;
+ overflow: hidden;
+ 
+ 
+
+}
+.asd{
+  
+}
+.end {
+  height: 100vh;
+}
+.designs {
+  height: 50vh;
+  width: 100%;
+}
+.dtitle {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+position: relative;
+top: 20%;
+}
+.dtitle > p {
+  opacity: 0.5;
+}
+#imgsample {
+  position: absolute;
+  height: auto;
+  width: 300px;
+  top: 30%;
+  left: 70%;
+}
+#imgsample1 {
+  position: absolute;
+  height: auto;
+  width: 300px;
+  top: 30%;
+  left: 10%;
+}
+#imgsample2 {
+  position: absolute;
+  height: auto;
+  width: 300px;
+  top: 60%;
+  left: 10%;
+}
+#imgsample3 {
+  position: absolute;
+  height: auto;
+  width: 300px;
+  top: 60%;
+  left: 70%;
+}
+.imgsamplec {
+  position: absolute;
+
+  width: 100%;
+}
+
+.designImgs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+
+}
+.imgsample8{
+height: auto;
+}
+.left30{
+
+
+}
+.leftpar1{
+
+}
+.lastpar2{
+
+}
+.middilepart40{
+
+}
+.right30{
+
+}
+.right1{
+
+
+}
+.right2{
+ 
+
+  
+}
+#ir2{
+  height: 200px;
+}
+.middleimg1 {
+
+}
+.leftone {
+
+}
+.leftdwnone {
+
+}
+.leftlast{
+
+}
+.rightlast{
+
+}
+.leftdwnlast{
+
+
+}
+.leftdwnlast{
+
+  
+}
+.rightone {
+
+}
+.rightdwnone {
+
+}
+.rightdwnlast{
+
+  
+}
+.imgsample8{
+
+
+}
+.linecont{
+
+  width: 100%;
+
+}
+.line{
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: grey;
+  opacity: 0.5;
+}
+.para {
+  height: 100vh;
+  width:60vw;
+  text-align: center;
+  font-size: 120px;
+  opacity: 1;
+}
+#qe{
+  background-color: transparent;
+color: white;
+border: none;
+font-family: sans-serif;
+font-size: 40px;
+font-weight: lighter;
+}
+.exp > textarea{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+.visproj{
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.visproj::after{
+content: '';
+position: absolute;
+top: 90%;
+width: 0px;
+height: 1px;
+background-color: white;
+transition: all 1s;
+}
+.visproj:hover::after{
+width: 260px;
+}
